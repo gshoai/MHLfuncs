@@ -1,0 +1,22 @@
+% MHLfuncs
+% By: Minh Hoai Nguyen (minhhoai@cs.stonybrook.edu)
+% Created: 12-Jul-2015
+% Last modified: 12-Jul-2015
+
+This contains Matlab functions that support various tasks, including classification 
+(e.g., SVM, ridge regression, kernel computation, kNN), evaluation (e.g., computing ROC and AP), 
+optimization (e.g., Sgd, Asgd), parallelism (e.g., parallel k-means), utility functions 
+(e.g., load and save in Matlab, create latex table), video handling (frame extraction, 
+mp4 video clip creation, video shot detection, video thread creation). 
+These functions are frequently used in my research. Some of them might be useful for other people.
+
+This is version 4.0. Previous versions are MyGradFuncs.
+This version is a clean-up version of MyGradFuncs with the removal of obsolete functions. 
+
+
+== Setup 
+
+In Matlab: 
+
+> run /full/path/to/the/library/directory/ml_setup
+
