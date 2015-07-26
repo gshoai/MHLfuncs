@@ -162,7 +162,7 @@ classdef ML_RectUtils
         
         
         function drawBoxes(boxes, colors, lineWidth)
-            if ~exist('color', 'var') || isempty(color)
+            if ~exist('colors', 'var') || isempty(colors)
                 colors = {'r', 'g', 'b', 'c', 'm', 'y'};
             end;
             
