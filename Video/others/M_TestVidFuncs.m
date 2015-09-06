@@ -9,8 +9,8 @@ classdef M_TestVidFuncs
         function demo1()
             clip.file = 'ori.mp4';
             clip.start ='00:01:00,000';
-            clip.end = '00:01:30,269';
-            opts.ffmpegBin = ML_FfmpegParse.ffmpegBin;
+            clip.end = '00:01:30,269';            
+            opts.ffmpegBin = ML_FfmpegParse.getFfmpegBin();
             opts.newH = 480;
             ML_VidClip.extVid(clip, 'out.mp4', opts);
         end;
@@ -20,7 +20,7 @@ classdef M_TestVidFuncs
             % Example 1, extracting a clip
             clip.file = 'sample.mp4';            
             outFrmDir = 'frames';
-            opts.ffmpegBin = ML_FfmpegParse.ffmpegBin;
+            opts.ffmpegBin = ML_FfmpegParse.getFfmpegBin();
             ML_VidClip.extFrms(clip, outFrmDir, opts);
             
             % Example 2, with various options
@@ -29,7 +29,7 @@ classdef M_TestVidFuncs
             clip2.start = '00:00:02,000'; % specific section of the clip
             clip2.end = '00:00:05,250';
             clip2.flip = 1; % flip horizontally
-            opts2.ffmpegBin = ML_FfmpegParse.ffmpegBin;
+            opts2.ffmpegBin = ML_FfmpegParse.getFfmpegBin();
             opts2.fps = 10;
             opts2.newH = 200;
             opts2.frmQuality = '-q:v 4';
@@ -43,7 +43,7 @@ classdef M_TestVidFuncs
             outFrmDir = 'frames';
             %clip.file = 'Frasier_01x02_begin.mp4';            
             %outFrmDir = 'frames';
-            opts.ffmpegBin = ML_FfmpegParse.ffmpegBin;
+            opts.ffmpegBin = ML_FfmpegParse.getFfmpegBin();
             
             % first extract frames
             ML_VidClip.extFrms(clip, outFrmDir, opts);
@@ -70,7 +70,7 @@ classdef M_TestVidFuncs
         function demo4()            
             clip.file = 'sample.mp4';            
             outFrmDir = 'frames';
-            opts.ffmpegBin = ML_FfmpegParse.ffmpegBin; 
+            opts.ffmpegBin = ML_FfmpegParse.getFfmpegBin();
             
             % first extract frames
             ML_VidClip.extFrms(clip, outFrmDir, opts);
